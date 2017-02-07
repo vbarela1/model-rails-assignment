@@ -1,0 +1,35 @@
+<%= form_for @model do |f| %>
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+
+<div>
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+</div>
+
+<div>
+  <%= f.label :hair_color %>
+  <%= f.text_field :hair_color %>
+</div>
+
+<div>
+  <%= f.label :eye_color %>
+  <%= f.text_field :eye_color %>
+</div>
+
+<div>
+  <%= f.label :gender %>
+  <%= f.select :gender, Model.genders %>
+</div>
+
+<div>
+  <%= f.label :alive %>
+  <%= f.select :alive, [['Yes', true], ['No', false]] %>
+</div>
+
+<%= f.submit %> 
+
+<% end %>  
+

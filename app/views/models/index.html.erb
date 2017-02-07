@@ -1,0 +1,17 @@
+<h1>All Models</h1>
+<% if @models.any? %>
+
+  <% @models.each do |model| %>
+  <div>
+    <%= link_to model.info, model_path(model) %> 
+  </div>
+  <% end %>
+
+<% else %>
+  <h3>No Models Found, Please Create a New Profile!</h3>
+<% end %>
+
+<hr />
+<%= link_to 'New Model', new_model_path %>
+
+

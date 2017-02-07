@@ -1,0 +1,17 @@
+<h1><%= @model.names %></h1>
+
+<ul>
+  <li>Age: <%= @model.age %></li>
+  <li>Hair_color: <%= @model.hair_color %></li>
+  <li>eye_color: <%= @model.eye_color %></li>
+  <li>Gender: <%= @model.gender %></li>
+  <li>Alive: <%= @model.alive %></li>
+
+  <br />
+  <li>
+    <%= link_to 'Edit', edit_model_path(@model) %>
+    <%= link_to 'Delete', model_path(@model), method: :delete, data: {confirm: 'Really Delete?'} %>
+  </li> 
+</ul>
+
+<%= link_to 'All Models', models_path %>
