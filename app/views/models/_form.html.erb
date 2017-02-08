@@ -1,3 +1,12 @@
+<% if @model.errors.any? %> 
+ <h3> <%= @model.errors.count %> Errors </h3>
+ <ul>
+   <% @model.errors.full_messages.each do |message| %>
+     <li> <%= message %></li>
+   <% end %>
+  </ul>
+ <% end %> 
+
 <%= form_for @model do |f| %>
 <div>
   <%= f.label :name %>
